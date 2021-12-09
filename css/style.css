@@ -15,11 +15,12 @@ Default:1
 --- 02 COLORS
 
 - Primary: #e67e22
-- Tints:
+- Tints: #fdf2e9
 - Shades:
 - Accents:
 - Greys:
 #555
+#333
 
 --- 05 SHADOWS
 
@@ -30,6 +31,15 @@ Default:1
       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
       
       */
+
+:root {
+  --color-primary: #e67e22;
+  --color-primart-lighter: #cf711f;
+  --color-secondary: #fdf2e9;
+  --color-body: #555;
+  --color-white: #fff;
+}
+
 *,
 *::after,
 *::before {
@@ -38,9 +48,130 @@ Default:1
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+}
+
+.section-hero {
+  background-color: var(--color-secondary);
+  padding: 9.6rem 0;
+}
+
+.hero-text-box {
+  align-self: center;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.6rem;
+
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+
+
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transition: all .3s;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: var(--color-primart-lighter);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: var(--color-white);
+  color: var(--color-body);
+  transition: all .3s;
+
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--color-secondary);
+  box-shadow: inset 0 0 0 3px var(--color-white);
+}
+
+.hero-img {
+  width: 100%;
+
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 1.6rem;
+
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+
+  border: 3px solid var(--color-secondary);
+}
+
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: var(--color-primart-lighter);
+  font-weight: 700;
 }
